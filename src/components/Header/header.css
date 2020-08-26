@@ -1,0 +1,11 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logout h1 {
+  font-size: 1.2rem;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.wrap {
+  width: 50%;
+  margin: auto;
+}
+
+.goback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+#formulario {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+#formulario input {
+  height: 40px;
+  width: 300px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+#formulario input[type="submit"] {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  #formulario {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-between;
+  }
+}
