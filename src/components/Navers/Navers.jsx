@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./navers.css";
-import Lista from "./Lista";
-import PopUp from "./PopUp";
+import Lista from "../utilities/Lista";
+import PopUp from "../utilities/PopUp";
 import Context from "../../Context";
 
-import Excluido from "../ModalSucesso";
+import Excluido from "../utilities/ModalSucesso";
 
 function Navers() {
   const { modalSucesso } = useContext(Context);

@@ -6,7 +6,7 @@ import "./app.css";
 import Context from "./Context";
 
 import Login from "./components/Login/Login";
-import Container from "./components/Container";
+import Container from "./components/utilities/Container";
 import AddNaver from "./components/AddNaver/AddNaver";
 import Edit from "./components/Edit/Edit";
 
@@ -52,7 +52,7 @@ export default function App() {
           <Route exact path="/navers" component={Container} />
           <Route exact path="/navers/edit/:id" component={Edit} />
           <Route exact path="/navers/add-naver" component={AddNaver} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Login} />
         </Switch>
       </BrowserRouter>
     </Context.Provider>

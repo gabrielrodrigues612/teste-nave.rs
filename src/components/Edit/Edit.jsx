@@ -4,8 +4,8 @@ import "./edit.css";
 
 import Context from "../../Context";
 import Header from "../Header/Header";
-import Jumbotron from "./Jumbotron";
-import Editado from "../ModalSucesso";
+import Jumbotron from "../utilities/Jumbotron";
+import Editado from "../utilities/ModalSucesso";
 
 function Edit({ history, match }) {
   const { auth, authAxios, modalSucesso, setModalSucesso } = useContext(
@@ -20,11 +20,6 @@ function Edit({ history, match }) {
   const [tempoEmpresa, setTempoEmpresa] = useState("");
   const [url, setUrl] = useState("");
 
-  if (!auth) {
-    history.push("/login");
-    return null;
-  }
-
   useEffect(() => {
     async function usuario() {
       const { data } = await authAxios.get(`/navers/${match.params.id}`);
@@ -36,6 +31,12 @@ function Edit({ history, match }) {
     }
     usuario();
   }, [match.params.id, authAxios]);
+
+  if (!auth) {
+    history.push("/login");
+    return null;
+  }
+
 
   function updateNome(e) {
     setNome(e.target.value);

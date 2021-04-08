@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { withRouter, Link } from "react-router-dom";
 import "./addNaver.css";
 
-import Adicionado from "../ModalSucesso";
+import Adicionado from "../utilities/ModalSucesso";
 
 import Context from "../../Context";
 import Header from "../Header/Header";
@@ -19,7 +19,7 @@ function AddNaver({ history }) {
   const [url, setUrl] = useState("");
 
   if (!auth) {
-    history.push("/login");
+    history.push("/");
     return null;
   }
 

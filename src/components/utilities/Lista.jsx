@@ -8,7 +8,7 @@ function Lista({ popUp, setHandle }) {
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  }, [fetchApi]);
 
   return (
     <div className="lista">
